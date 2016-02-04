@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="233949790426-mrs7n91m7tj3gja5ir1ik29vvo1m2u44.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+<link href='https://fonts.googleapis.com/css?family=Amaranth:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="resources/css/mystyle.css">
+<script type="text/javascript" src="resources/scripting/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="resources/scripting/firebase.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="g-signin2 gof" data-onsuccess="onSignIn" data-theme="dark">
+
+</div>
+<a id = "so" href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+    
+  }
+</script>
+	<h1><strong>PP</strong>Short reading give Big Know..!!</h1>
+	<h2>"An expert is a person who has made all the mistakes that can be made in a very narrow field"</h2>
+	<p class="byline">January 09<strong>Niels Bohr</strong></p>
+	<ul>
+        <li><a href="google3ebc94084479154e.html">Niels Bohr</a></li>
+        <li><a href="">Isaac Newton</a></li>
+        <li><a class="pa" href="">Albert Einstein</a></li>
+        <li><a href="">Stephen Hawking</a></li>
+        <li><a href="boot.html">Try New </a></li>
+		
+	</ul>
+	<h3>Esse quam nulla</h3>
+	<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <em>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</em> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+	<h3>Quis autem vel eum</h3>
+	<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <strong>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </strong>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+</div>
+ 
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+</body>
+</html>
